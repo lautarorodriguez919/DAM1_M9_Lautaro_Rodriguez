@@ -28,13 +28,10 @@ function calcular(num1, num2, operacion = "suma") {
 
 
 //Ejercicio 3
-/*console.log(calcularPromedio(10, 8, 9)); 
-console.log(calcularPromedio(10, "Hola", 5, true));*/
-function calcularPromedio(...todasLasEntradas){
-    let notasValidas = todasLasEntradas.filter(nota => typeof nota === 'number');
-    if (notasValidas.length === 0) return 0;
-    let sumaTotal = notasValidas.reduce((acumulador, nota) => acumulador + nota, 0);
-    return sumaTotal / notasValidas.length;
+console.log(calcularPromedio(10, 8, 9)); 
+console.log(calcularPromedio(10, "Hola", 5, true));
+function calcularPromedio(...array){
+    
 }
 
 /*console.log(concatenarNombres("Lautaro", 50, "Rodriguez", true, null, "Vera"));*/

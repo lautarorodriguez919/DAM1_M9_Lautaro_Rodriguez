@@ -37,11 +37,11 @@ const server = createServer((req, res) => {
     // 2. Buscar alumno en el array
     const student = students.find(s=>s.id===id);
     // 3. Si no existe → 404
-    if(!students){
+    if(!student){
       return sendJson(res, 404, {message:"not found"});
     }
     // 4. Si existe → devolver 200 + alumno
-    return sendJson(res, 200, students);
+    return sendJson(res, 200, student);
   }
 
   // TODO 2: DELETE /students/:id
@@ -67,12 +67,12 @@ const server = createServer((req, res) => {
   if (req.method === "POST" && req.url === "/students") {
 
     // 1. Leer el body con readBody() --> Es donde esta toda la info del nuevo alumno.
-    readBody(req,(req,(err,alumnoNew)=>{
-      if(err){
-        return sendJson(res, 400, {message:"Peticion mala"});
-      }
+    readBody(req,(err,alumnoNew) => {
+    if(err){
+      return sendJson(res, 400, {message:"Peticion mala"});
+    }
     // 2. Validar que tenga id, nombre y curso
-    if(!alumnoNew.id||!alumnoNew.nombre||alumnoNew.curso){
+    if(!alumnoNew.id||!alumnoNew.nombre|| !alumnoNew.curso){
       return sendJson(res, 400, {message:"Peticion mala"});
     }
     // 3. Comprobar que el id no esté repetido
@@ -84,7 +84,7 @@ const server = createServer((req, res) => {
     students.push(alumnoNew);
     // 5. Devolver 201 + alumno creado
     return sendJson(res, 201, {message:"Creado",alumno:alumnoNew});
-    }));
+    });
     return;
   }
 
@@ -96,20 +96,20 @@ const server = createServer((req, res) => {
     // 2. Buscar alumno
     const student = students.find(s=>s.id===id);
     // 3. Si no existe → 404
-    if(!students){
+    if(!student){
       return sendJson(res, 404, {message:"not found"});
     }
     // 4. Leer body con readBody() --> Ahora será otra callback!!!
-    readBody(req,(req,(err,alumnoNew)=>{
+    readBody(req,(err,alumnoNew)=>{
       if(err){
         return sendJson(res, 400, {message:"Peticion mala"});
       }
     // 5. Actualizar campos enviados
-    if(body.nombre) student.nombre = body.nombre;
-    if(body.curso) student.curso = body.curso;
+    if(alumnoNew.nombre) student.nombre = body.nombre;
+    if(alumnoNew.curso) student.curso = body.curso;
     // 6. Devolver 200 + alumno actualizado
     return sendJson(res,200,student);
-    }));
+    });
     return;
   }
   // Si no coincide ningún endpoint

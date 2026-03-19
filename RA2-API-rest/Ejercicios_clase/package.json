@@ -2,10 +2,10 @@
   "name": "ejercicios_clase",
   "version": "1.0.0",
   "description": "",
-  "main": "Ejercicio_2_CRUD_Express.js",
+  "main": "Ejercicio_3.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node Ejercicio_2_CRUD_Express.js"
+    "dev": "node ./services/Ejercicio_3.js"
   },
   "keywords": [],
   "author": "",

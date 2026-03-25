@@ -4,6 +4,7 @@
 
 import express from "express"
 import teelab from "./routes/TeeLab.routes.js"
+import comandas from "./routes/comanda.routes.js"
 
 const app = express();
 const PORT = 3001;  
@@ -16,6 +17,7 @@ app.use((req,res,next) => {
 })
 
 app.use("/api/camisetas", teelab)
+app.use("/api/comandas", comandas)
 
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en puerto ${PORT}`)

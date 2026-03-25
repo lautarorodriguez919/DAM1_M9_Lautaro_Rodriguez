@@ -1,6 +1,9 @@
 import { Router } from "express"
+import {getAll, getById} from "../controller/TeeLabController.js"
+
 const router = Router()
 
-export default router
+router.get("/", getAll)
+router.get("/:id", getById)
 
-router.get("")
+export default router

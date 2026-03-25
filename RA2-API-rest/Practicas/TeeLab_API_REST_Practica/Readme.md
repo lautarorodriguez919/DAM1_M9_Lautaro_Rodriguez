@@ -23,33 +23,42 @@ El servidor arranca en http://localhost:3001/
 
 - GET /api/camisetas?tag=nuevo — filtra por tag
 
-
+![tags](img/tags.png)
 
 - GET /api/camisetas?q=palabra — busca en nombre o descripción
 
-
+![nombre_descripcion](img/nombre_descripcion.png)
 
 - GET /api/camisetas?sort=precio_asc — ordena por precio ascendente
 
+![precio_asc](img/precio_asc.png)
 
 - GET /api/camisetas?sort=precio_desc — ordena por precio descendente
 
-![colores](img/colores.png)
+![precio_desc](img/precio_desc.png)
 
 - GET /api/camisetas?sort=nombre_asc — ordena por nombre ascendente
 
-![colores](img/colores.png)
+![nombre_asc](img/nombre_asc.png)
 
 - GET /api/camisetas?sort=nombre_desc — ordena por nombre descendente
 
-![colores](img/colores.png)
+![nombre_desc](img/nombre_desc.png)
 
 - GET /api/camisetas/:id — detalle de una camiseta
 
-![colores](img/colores.png)
+![id](img/id.png)
 
 
 ### Comandas
 - POST /api/comandas — crear una comanda
+
+![post_comandas](img/post_comandas.png)
+
 - GET /api/comandas — listar todas las comandas
+
+![comandas](img/comandas.png)
+
 - GET /api/comandas/:id — detalle de una comanda
+
+![id_comanda](img/id_comanda.png)

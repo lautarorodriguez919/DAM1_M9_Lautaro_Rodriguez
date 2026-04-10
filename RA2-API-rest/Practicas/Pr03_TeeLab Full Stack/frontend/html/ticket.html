@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeeLab - Ticket</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>TeeLab</h1>
+        <a href="index.html">← Volver al catálogo</a>
+    </header>
+
+    <main id="ticket-container">
+        <h2>Resumen del pedido</h2>
+
+        <div id="ticket-datos">
+            <p>ID pedido: <strong id="ticket-id"></strong></p>
+            <p>Fecha: <strong id="ticket-fecha"></strong></p>
+            <p>Estado: <strong id="ticket-estado"></strong></p>
+        </div>
+
+        <div id="ticket-lineas">
+            <!-- Las líneas del pedido se generan con JS -->
+        </div>
+
+        <div id="ticket-total">
+            <p>Total: <strong id="ticket-total-precio"></strong></p>
+        </div>
+    </main>
+
+    <script src="js/ticket.js"></script>
+</body>
+</html>

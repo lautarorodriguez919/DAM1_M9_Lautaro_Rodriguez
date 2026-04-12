@@ -5,7 +5,7 @@ y backend en Node.js + Express.
 
 ## Vídeo de demostración
 
-https://github.com/lautarorodriguez919/DAM1_M9_Lautaro_Rodriguez/tree/main/RA2-API-rest/Practicas/Pr03_TeeLab_Full_Stack/frontend/imgPr03_TeeLab_Full_Stack.mp4
+https://drive.google.com/file/d/1o8id2c4F3C6lwrbGdPpMI4YLq51zeXEI/view?usp=sharing
 
 > El vídeo muestra el catálogo, filtros, añadir al carrito, finalizar compra y ticket.
 

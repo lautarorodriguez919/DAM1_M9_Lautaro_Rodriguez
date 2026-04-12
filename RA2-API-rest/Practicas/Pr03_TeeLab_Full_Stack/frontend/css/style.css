@@ -1,0 +1,227 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: sans-serif; background: #f5f5f5; color: #333; }
+
+header {
+    background: #111;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+#filtros {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: white;
+    flex-wrap: wrap;
+}
+
+#filtros input, #filtros select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.card-producto {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.card-producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: #eee;
+    border-radius: 4px;
+}
+
+.card-producto h2 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+.card-producto .descripcion { font-size: 0.9rem; color: #666; }
+.card-producto .precio { font-size: 1.2rem; font-weight: bold; color: #111; }
+
+.card-producto label {
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.card-producto select {
+    width: 100%;
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.card-producto input[type="number"] {
+    width: 100%;
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-añadir {
+    width: 100%;
+    padding: 0.6rem;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: auto;
+}
+
+.btn-añadir:hover { background: #333; }
+
+#carrito-container, #ticket-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+#carrito-container h2, #ticket-container h2 {
+    margin-bottom: 1.5rem;
+}
+
+.linea-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.linea-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.linea-nombre { font-weight: bold; }
+.linea-detalle { font-size: 0.85rem; color: #666; }
+.linea-precio { font-size: 0.95rem; }
+
+.btn-eliminar {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-eliminar:hover { background: #c0392b; }
+
+#resumen-carrito {
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+#resumen-carrito p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#btn-vaciar {
+    background: #95a5a6;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+#btn-vaciar:hover { background: #7f8c8d; }
+
+#btn-finalizar {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#btn-finalizar:hover { background: #333; }
+
+.carrito-vacio {
+    text-align: center;
+    color: #999;
+    font-size: 1.1rem;
+    padding: 2rem;
+}
+
+#ticket-datos {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.linea-ticket {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.linea-ticket .linea-nombre { font-weight: bold; }
+.linea-ticket .linea-detalle { font-size: 0.85rem; color: #666; }
+.linea-ticket .linea-precio { font-size: 0.95rem; text-align: right; }
+
+#ticket-total {
+    margin-top: 1rem;
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.error {
+    color: #e74c3c;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+}
+
+.no-results {
+    text-align: center;
+    color: #999;
+    padding: 2rem;
+    font-size: 1.1rem;
+}

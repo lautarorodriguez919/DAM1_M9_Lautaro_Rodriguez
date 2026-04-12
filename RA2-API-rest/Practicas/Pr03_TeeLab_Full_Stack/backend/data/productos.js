@@ -7,7 +7,7 @@ const productos = [
     "tallas": ["S", "M", "L", "XL"],
     "colores": ["blanco", "negro", "mostaza"],
     "imagenes": {
-      "blanco": "img/MACACARENA.png",
+      "blanco": "img/MACACARENA_WHITE.png",
       "negro": "img/MACACARENA_BLACK.png",
       "mostaza": "img/MACACARENA.png"
     },

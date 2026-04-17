@@ -3,7 +3,7 @@ import {getAll, getById} from "../controller/TeeLabController.js"
 
 const router = Router()
 
-router.get("/", getAll)
-router.get("/:id", getById)
+router.get("/", getAll)        // GET /api/camisetas
+router.get("/:id", getById)   // GET /api/camisetas/123
 
 export default router

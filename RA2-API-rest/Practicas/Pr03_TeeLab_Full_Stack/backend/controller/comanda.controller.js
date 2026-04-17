@@ -2,11 +2,11 @@ import * as ComandaService from "../services/comanda.service.js"
 import {validarComanda} from "../validators/comanda.validator.js"
 import camisetas from "../data/productos.js"
 
-export const postComanda = (req,res) =>{
-      const error = validarComanda(req.body, camisetas)
-      if(error) return res.status(400).json({error})
-      const comanda = ComandaService.crearComanda(req.body)
-      res.status(201).json(comanda)
+export const postComanda = (req, res) => {
+    const error = validarComanda(req.body, camisetas) // ← valida antes de crear
+    if(error) return res.status(400).json({error})    // ← si hay error, para aquí
+    const comanda = ComandaService.crearComanda(req.body)
+    res.status(201).json(comanda)                     // ← 201 porque crea algo nuevo
 }
 
 export const getAllComandas = (req,res) =>{

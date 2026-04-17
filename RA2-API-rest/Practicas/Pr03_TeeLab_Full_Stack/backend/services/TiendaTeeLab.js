@@ -4,8 +4,8 @@ export const getAllCamisetas = (filtros) =>{
     const {talla, color,tag,q,sort} = filtros
     let resultado = camisetas
 
-    if (talla) resultado = resultado.filter(c => c.tallas.includes(talla))
-    if (color) resultado = resultado.filter(c => c.colores.includes(color))
+    if (talla) resultado = resultado.filter(c => c.tallas.includes(talla))   // filtra por talla
+    if (color) resultado = resultado.filter(c => c.colores.includes(color))  // filtra por color
     if (tag) resultado = resultado.filter(c => c.tags.includes(tag))
     if (q) resultado = resultado.filter(c => c.nombre.toLowerCase().includes(q) || c.descripcion.toLowerCase().includes(q))
     if (sort == "precio_asc") resultado = resultado.sort(((a, b) => a.precioBase - b.precioBase))

@@ -1,51 +1,17 @@
-//COOKIES
-//Una cookie es un fichero de texto pequeño que el navegador guarda en tu dispositivo. Máximo 4KB.
-// Las 3 funciones que necesitas saber escribir de memoria:
-// GUARDAR
-function setCookie(nombre, valor, dias = 7) {
-    const expires = new Date(Date.now() + dias * 864e5).toUTCString();
-    document.cookie = `${nombre}=${encodeURIComponent(valor)}; expires=${expires}; path=/`;
-}
+//Conversion de pdfs a formato Markdown
 
-// LEER
-function getCookie(nombre) {
-    return document.cookie
-        .split('; ')
-        .find(c => c.startsWith(nombre + '='))
-        ?.split('=')[1]
-        ?? null; // ← si no existe devuelve null
-}
+/*from markitdown import MarkItDown
 
-// BORRAR (expires en el pasado)
-function deleteCookie(nombre) {
-    document.cookie = `${nombre}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
-}
+# 1. Inicializamos MarkItDown
+md = MarkItDown()
 
+# 2. Convertimos el PDF
+result = md.convert("06 Sincrono_Asincrono - API REST.pdf")
 
-//LOCALSTORAGE
-//Igual que cookies pero 5MB, no viaja al servidor, no caduca nunca.
+# 3. GUARDAMOS EL ARCHIVO
+# 'w' significa 'write' (escribir). Si el archivo no existe, lo crea.
+# encoding="utf-8" es crucial para que los acentos y las eñes se guarden bien.
+with open("presentacion_convertida.md", "w", encoding="utf-8") as archivo:
+    archivo.write(result.text_content)
 
-// GUARDAR — siempre stringify para objetos
-localStorage.setItem('alumno', JSON.stringify({ nombre: 'Aina' }));
-
-// LEER — siempre parse
-const alumno = JSON.parse(localStorage.getItem('alumno'));
-
-// BORRAR una clave
-localStorage.removeItem('alumno');
-
-// BORRAR todo
-localStorage.clear();
-
-//CORS — Para conectar frontend con backend
-//CORS es el "portero" del navegador. Decide si el frontend puede hablar con el backend.
-//Mismo origen = mismo protocolo + dominio + puerto. Si algo cambia → origen diferente → CORS bloquea.
-
-// En Express — instalar: npm install cors
-import cors from "cors"
-
-app.use(cors({ origin: 'http://localhost:5500' })) // solo permite tu frontend
-// o
-app.use(cors()) // permite todo (con cuidado)
-
-
+print("¡Conversión terminada! El archivo 'presentacion_convertida.md' se ha guardado en tu carpeta.")*/

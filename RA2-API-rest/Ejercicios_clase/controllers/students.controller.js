@@ -1,4 +1,4 @@
-import * as studentsService from '../services/Ejercicio_3';
+import * as studentsService from '../services/Ejercicio_3.js';
 
 export function getAll(req, res) {
  res.json(studentsService.getAll());
